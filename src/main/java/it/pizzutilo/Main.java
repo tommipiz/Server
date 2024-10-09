@@ -16,10 +16,19 @@ public class Main {
         BufferedReader in = new BufferedReader(new InputStreamReader(s.getInputStream()));
         DataOutputStream out = new DataOutputStream(s.getOutputStream());
 
-        String stringRicevuta = in.readLine();
-        System.out.println("La stringa ricevuta: " + stringRicevuta);
+        String stringRicevuta;
+        do {
+            String stringRicevuta = in.readLine();
+            if(stringRicevuta.equals("0")) {
+                System.out.println("Comunicazione terminata");
+            } else {
+                System.out.println("La stringa ricevuta: " + stringRicevuta);
+                out.writeBytes();
+            }
 
-        out.writeBytes("Server" + "\n");
+        }while(stringRicevuta.equals(stringRicevuta));
+
+        out.writeBytes("sono il Server" + "\n");
 
         s.close();
         ss.close();
