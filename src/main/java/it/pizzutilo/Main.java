@@ -18,12 +18,12 @@ public class Main {
 
         String stringRicevuta;
         do {
-            String stringRicevuta = in.readLine();
+            stringRicevuta = in.readLine();
             if(stringRicevuta.equals("0")) {
                 System.out.println("Comunicazione terminata");
             } else {
                 System.out.println("La stringa ricevuta: " + stringRicevuta);
-                out.writeBytes();
+                out.writeBytes(stringRicevuta.toUpperCase() + "\n");
             }
 
         }while(stringRicevuta.equals(stringRicevuta));
